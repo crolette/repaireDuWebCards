@@ -1,0 +1,321 @@
+/* Dark on light */
+:root{
+  --main-bg-color: #fff7e8; /* Serenade */
+  --card-text-color: #fff7e8; /* Light serenade */
+
+  --main-text-color: #3D3E49; /* Tuna */
+  --card-color: #3D3E49; /* Tuna */
+
+  --heading-color: #AA8D63; /* Muesli */
+
+  --box-shadow: #68615F; /* Dove gray */
+
+  --accent: #CAA571; /* Laser */
+}
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'New Tegomin', serif;
+  color: var(--heading-color);
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+main{
+  margin-top: 25px;
+  display: grid;
+  grid-row-gap: 50px;
+}
+
+
+.title-cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  height: 100px;
+  background: var(--heading-color);
+  font-size: 2rem;
+  font-weight: bold;
+
+}
+
+.container-cards-1{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 320px);
+  grid-template-rows: repeat(auto-fit, 500px);
+  grid-gap: 100px 50px;
+}
+
+.cards-1{
+  background: var(--card-color);
+  color: var(--card-text-color);
+  display: grid;
+  height: 500px;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: 200px 100px 75px 50px 75px;
+  grid-template-areas:
+  "hero hero hero"
+  "date promo persons"
+  "detail detail detail"
+  "adresse adresse adresse"
+  "cta cta cta";
+  box-shadow: 3px 3px 5px var(--box-shadow);
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+}
+
+.hero-text{
+  background-color: rgba(255,247,232,0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero{
+  grid-area: hero;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--main-text-color);
+  border-radius: 5px;
+}
+
+.hero h2{
+  font-size: 3rem;
+  text-shadow: 2px 2px 2px var(--card-color);
+}
+
+.hero h3{
+  color: var(--box-shadow);
+}
+
+.img-one{
+  background-image: url("images/restaurant.jfif");
+  /* opacity: 0.5; */
+  background-position: center;
+  background-size: cover;
+}
+
+.img-two{
+  background-image: url("images/concert.jfif");
+  /* opacity: 0.5; */
+  background-position: center;
+  background-size: cover;
+}
+
+.img-three{
+  background-image: url("images/theme-park.jfif");
+  /* opacity: 0.5; */
+  background-position: center;
+  background-size: cover;
+}
+
+.date, .promo, .persons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--box-shadow);
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+.date{
+  grid-area: date;
+  border-right: 1px solid var(--accent);
+}
+
+.promo{
+  grid-area: promo;
+  font-size: 2rem;
+  font-weight: bold;
+  border-left: 2px solid var(--card-color);
+  border-right: 2px solid var(--card-color);
+}
+
+.persons{
+  flex-direction: column;
+  grid-area: persons;
+  border-left: 1px solid var(--accent);
+}
+
+.nb-persons{
+  font-size: 2rem;
+}
+
+.detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: detail;
+}
+
+.adresse{
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: adresse;
+}
+
+.cta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: cta;
+}
+
+.cta button{
+  height: 100%;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--box-shadow);
+  background: var(--accent);
+  border:0;
+  border-radius: 5px;
+}
+
+.cta button:hover{
+  color: var(--accent);
+  background: var(--card-color);
+  border-top: 1px solid var(--accent);
+}
+
+
+
+/* CARDS 2 */
+.container-cards-2{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 320px);
+  grid-template-rows: repeat(auto-fit, 500px);
+  grid-gap: 50px 50px;
+}
+
+.cards-2{
+  display: flex;
+  width: 320px;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  border-radius: 5px;
+  background: var(--card-color);
+  color: var(--card-text-color);
+}
+
+.hero{
+  height: 200px;
+}
+
+.hero img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center;
+  margin-top: -50px;
+  border: 1px solid var(--accent);
+  box-shadow: 0px 0px 10px var(--accent);
+}
+
+.title{
+  text-align: center;
+}
+
+.title h2{
+  font-size: 3rem;
+}
+
+.offer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  height: 100px;
+  width: 100%;
+}
+
+.promotion{
+  font-weight: bold;
+}
+
+.small-text{
+  font-size: 0.75rem;
+}
+
+.details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 75px;
+  width: 100%;
+}
+
+.address{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 0.75rem;
+}
+
+.achat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+}
+
+.achat button{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  color: var(--box-shadow);
+  background: var(--accent);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+.achat button:hover{
+  color: var(--accent);
+  background: var(--card-color);
+  border-top: 1px solid var(--accent);
+  font-weight: bold;
+}
